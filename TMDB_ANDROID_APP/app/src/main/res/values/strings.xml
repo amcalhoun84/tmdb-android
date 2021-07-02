@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">USC Films</string>
+    <string name="header">USC Films</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="movies">Movies</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_watchlist">Watchlist</string>
+    <string name="top_rated">Top-Rated</string>
+    <string name="popular">Popular</string>
+    <string name="hint">Search movies and TV</string>
+    <string name="footer">Powered by TMDB
+        \nDesigned By Andrew Michael Calhoun</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="no_results_watchlist">Nothing saved to watchlist.</string>
+    <string name="no_results_found">No results found.</string>
+    <string name="open_in_tmdb">Open in TMDB</string>
+    <string name="share_on_facebook">Share on Facebook</string>
+    <string name="share_on_twitter">Share on Twitter</string>
+    <string name="add_to_watchlist">Add to Watchlist</string>
+    <string name="remove_from_watchlist">Remove from Watchlist</string>
+    <string name="no_items_in_watchlist">Nothing saved to Watchlist</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="overview">Overview</string>
+    <string name="dummy_title">Dummy Title</string>
+    <string name="something_entertaining">Something Entertaining</string>
+    <string name="recommended_picks">Recommended Picks</string>
+    <string name="genres">Genres</string>
+    <string name="review_authdate">byReviewer</string>
+    <string name="review_rating">0 / 5</string>
+    <string name="review_text">someReview</string>
+    <string name="up_late">If you can read this, you\'re up way too late.</string>
+
+
+</resources>

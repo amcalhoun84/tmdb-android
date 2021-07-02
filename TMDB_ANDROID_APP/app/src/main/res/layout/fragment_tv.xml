@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.tabs.TVFragment">
+
+    <ScrollView
+        android:layout_width="413dp"
+        android:layout_height="609dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/tv_trending_now_slider"
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                app:sliderAnimationDuration="1000"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="1000"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="30dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="1dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1" />
+
+            <TextView
+                android:id="@+id/top_rated_tv_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="28sp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="@string/top_rated" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/top_rated_tv_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/popular_tv_text"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="@string/popular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_tv_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp" />
+
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:text="@string/footer"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textColor="@color/mediumblue" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

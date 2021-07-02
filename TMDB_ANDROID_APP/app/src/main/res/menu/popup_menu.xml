@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/openTMDB"
+        android:title="@string/open_in_tmdb"
+        />
+    <item
+        android:id="@+id/shareFB"
+        android:title="@string/share_on_facebook"
+        />
+    <item
+        android:id="@+id/shareTwitter"
+        android:title="@string/share_on_twitter"
+        />
+    <item
+        android:id="@+id/addWatchlist"
+        android:title="@string/add_to_watchlist"
+        android:enabled="true"
+        />
+</menu>

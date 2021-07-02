@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.details.DetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backdropImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                    android:id="@+id/youtube_player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:autoPlay="false">
+
+                </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/detailsProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="182dp"
+                android:layout_marginTop="100dp"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detailsLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="178dp"
+                android:text="Loading.."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/mediumblue"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/titleFilmText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="@string/something_entertaining"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center_vertical"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/overviewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/overview"
+                android:textColor="@color/mediumblue"
+                android:textStyle="bold"
+                android:textSize="18dp"  />
+
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/overviewText"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:trimMode="trimModeLength"
+                android:ellipsize="end"
+                app:trimLength="210"
+                app:colorClickableText="@color/gray_600" />
+
+            <TextView
+                android:id="@+id/genreText"
+                android:layout_marginStart="8dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:text="@string/genres"
+                android:textColor="@color/mediumblue"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/genreValue"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:text="Genres" />
+
+            <TextView
+                android:id="@+id/releaseText"
+                android:layout_marginStart="8dp"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:text="Year"
+                android:textColor="@color/mediumblue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/releaseValue"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:text="Year Released" />
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/watchlist_button"
+                    android:layout_margin="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+                <ImageView
+                    android:id="@+id/fb_button"
+                    android:layout_margin="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_facebook_24" />
+
+                <ImageView
+                    android:id="@+id/twitter_button"
+                    android:layout_margin="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_twitter_logo_dialog" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <TextView
+                android:id="@+id/castTitle"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Cast"
+                android:textStyle="bold"
+                android:textColor="@color/mediumblue"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:id="@+id/cast_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/castPictureRecyclers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reviewsTitle"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Reviews"
+                android:textColor="@color/mediumblue"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recPicksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/mediumblue"
+                android:textSize="20dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/recommended_picks" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendedRecycler"
+                android:layout_width="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
